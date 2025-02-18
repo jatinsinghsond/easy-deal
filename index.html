@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel="icon" href="icons/icon.png">
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Easy-Deal</title>
+
+</head>
+
+<body>
+  <header>
+    <div class="left-section">
+      <img class="logo" src="picture/logoo.png">
+    </div>
+
+    <div class="middle-section">
+
+        <input class="search-bar" type="search" placeholder=" Search for Mobiles, SmartWatches, Earbuds& More!">
+
+      <div class="search">
+        <img class="search-icon" src="icons/search.png">
+      </div>
+
+    </div>
+
+    <div class="account-info">
+
+      <div class="account-profile">
+        <img class="profile" src="icons/profile-user.png">
+        <div>
+          <p class="greeting">Hi!</p>
+          <p class="greeting-name">Jatin Singh</p>
+        </div>
+      </div>
+
+      <div class="cart-list">
+        <img class="cart" src="icons/cart.svg">
+        <p>Cart</p>
+
+        <div class="cart-tooltip">
+          <div class="cart-status">
+            <p>Ops! Your Cart is empty</p>
+          </div>
+          <div class="add-items">
+            <p> + Add items in cart</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="hamburger-menu">
+        <img class="menu" src="icons/menu.png">
+        <p>Menu</p>
+
+        <div class="menu-tooltip">
+          
+          <div class="menu-class">
+            <img class="track" src="icons/track.png">
+            <p>Track your order</p>
+          </div>
+          <div class="menu-class">
+            <img class="all-orders" src="icons/all-orders.svg">
+            <p>All orders</p>
+          </div>
+
+          <div class="menu-class">
+            <img class="wishlist" src="icons/wishlist-icon.svg">
+            <p>Wishlist</p>
+          </div>
+
+          <div class="help-class">
+            <img class="help-center" src="icons/help-center.svg">
+            <p>Help Center</p>
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <div class="banner">
+      <h3>Black Friday Sale!</h3>
+    </div>
+
+    <div class="category">
+      <p>All</p>
+      <p>Today's Deal</p>
+      <p>Mobiles</p>
+      <p>Electronics</p>
+      <p>Beauty Products</p>
+      <p>Home & Kitchen</p>
+      <p>Toys & More</p>
+      <p>TV & Appliances</p>
+      <p>Our Products</p>
+      <p>Clothes</p>
+      <p>Kids</p>
+      <p>Footwear</p>
+
+    </div>
+
+    <div class="ad-banner">
+      <img class="ad-banner" src="picture/ad-banner.jpg">
+    </div>
+
+    <div class="container">
+
+      <div class="products">
+
+
+        <h2 class="product-heading">Best Flagship Mobiles</h2>
+
+        <div class="item">
+          <img class="I-phone-pic"
+            src="data:image/jpeg;base64,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"
+            alt="I-phone">
+          <div class="product-info">
+            <p class="product-name">Apple iPhone 16</p>
+            <p class="product-price">Starting from ₹ 79,999</p>
+          </div>
+
+        </div>
+
+        <div class="item">
+          <img class="samsung-pic"
+            src="https://images.samsung.com/is/image/samsung/p6pim/in/sm-s721blbcins/gallery/in-galaxy-s24-fe-s721-sm-s721blbcins-thumb-543757325"
+            alt="samsung S24 FE">
+          <div class="product-info">
+            <p class="product-name">Samsung S24 FE</p>
+            <p class="product-price">Starting from ₹ 59,999</p>
+          </div>
+
+        </div>
+
+        <div class="item">
+          <img class="samsung-pic"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2RQj_Jro1K4S6zf_PxRevu2xzOlviRrKQgQ&s"
+            alt="iqoo 12 5G">
+          <div class="product-info">
+            <p class="product-name">IQOO 12 5G</p>
+            <p class="product-price">Starting from ₹ 49,999</p>
+          </div>
+
+        </div>
+
+        <div class="item">
+          <img class="samsung-pic"
+            src="https://images.jdmagicbox.com/quickquotes/images_main/12-ram-16-gb-512-gb-flowy-emerald-272751531-d2abqe4q.png"
+            alt="Oneplus 12">
+          <div class="product-info">
+            <p class="product-name">Oneplus 12</p>
+            <p class="product-price">Starting from ₹ 59,999</p>
+          </div>
+
+        </div>
+
+        <p class="see-more-link">See More ></p>
+
+      </div>
+
+      <div class="products">
+
+        <h2 class="product-heading">Beauty Products</h2>
+
+        <div class="item">
+          <img class="huda-beauty"
+            src="https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/resize-w:540/1116606/mP1WDoohrL-1116606_1.jpg"
+            alt="I-phone">
+          <div class="product-info">
+            <p class="product-name">Huda Beauty</p>
+            <p class="product-price">Grab Now!</p>
+          </div>
+
+        </div>
+
+        <div class="item">
+          <img class="samsung-pic"
+            src="https://www.hokmakeup.com/cdn/shop/files/5057566067959_1_87c1410d-31dd-4c15-845b-e9f350c5dcb6.jpg?v=1720599924https://www.hokmakeup.com/cdn/shop/files/5057566067959_1_87c1410d-31dd-4c15-845b-e9f350c5dcb6.jpg?v=1720599924"
+            alt="samsung S24 FE">
+          <div class="product-info">
+            <p class="product-name">Revolution Matte</p>
+            <p class="product-price">Special offers!</p>
+          </div>
+
+        </div>
+
+        <div class="item">
+          <img class="samsung-pic" src="https://sdcdn.io/mac/in/mac_sku_S7HH01_1x1_0.png?width=1080&height=1080"
+            alt="iqoo 12 5G">
+          <div class="product-info">
+            <p class="product-name">MAC Contour brush</p>
+            <p class="product-price">From ₹ 4,500</p>
+          </div>
+
+        </div>
+
+        <div class="item">
+          <img class="samsung-pic" src="https://sdcdn.io/mac/us/mac_sku_MXCT01_1x1_0.png?width=1080&height=1080"
+            alt="Oneplus 12">
+          <div class="product-info">
+            <p class="product-name">MAC Foundation</p>
+            <p class="product-price">Hurry up! few left</p>
+          </div>
+
+        </div>
+        <p class="see-more-link">See More ></p>
+
+      </div>
+
+      <div class="products">
+
+
+        <h2 class="product-heading">Kitchen Essentials</h2>
+
+        <div class="item">
+          <img class="I-phone-pic"
+            src="https://shop.ttkprestige.com/media/catalog/product/2/1/2132-20334-IMG1.jpg?optimize=high&fit=bounds&height=500&width=500"
+            alt="I-phone">
+          <div class="product-info">
+            <p class="product-name">Prestige Cooker</p>
+            <p class="product-price">from ₹ 2,250</p>
+          </div>
+
+        </div>
+
+        <div class="item">
+          <img class="samsung-pic"
+            src="https://cdn.staticans.com/image/tr:e-sharpen-01,h-1000,w-1000,cm-pad_resize/data/philips/28jun2024/NA120.jpg"
+            alt="samsung S24 FE">
+          <div class="product-info">
+            <p class="product-name">Phillips Airfryer</p>
+            <p class="product-price">from ₹ 4,900</p>
+          </div>
+
+        </div>
+
+        <div class="item">
+          <img class="samsung-pic"
+            src="https://media.croma.com/image/upload/v1688417682/Croma%20Assets/Small%20Appliances/Stoves%20Cooktops/Images/266968_17_jrs18q.png"
+            alt="iqoo 12 5G">
+          <div class="product-info">
+            <p class="product-name">Prestige Edge stove</p>
+            <p class="product-price">from ₹ 10,500</p>
+          </div>
+
+        </div>
+
+        <div class="item">
+          <img class="samsung-pic"
+            src="https://www.rasoishop.com/cdn/shop/files/8901309223126-2.jpg?v=1701191568&width=1445" alt="Oneplus 12">
+          <div class="product-info">
+            <p class="product-name">Borosil Electric Kettle</p>
+            <p class="product-price">from ₹ 990</p>
+          </div>
+
+        </div>
+
+        <p class="see-more-link">See More ></p>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="container-2">
+
+      <h2 class="heading">Daily Deals</h2>
+
+      <div class="products-2">
+
+        <div class="item-2">
+          <img class="mi-watch"
+            src="https://techtrix.lk/wp-content/uploads/2023/11/REDMIWATCH3ACTIVE-SIMPLYTEKLK_1220x_crop_center.webp">
+          <p>Mi Smartwatch Active 3</p>
+          <a href="">at ₹ 2,499</a>
+        </div>
+
+        <div class="item-2">
+          <img class="mi-watch" src="picture/asus-vivo.jpg">
+          <p>Asus Vivobook 15</p>
+          <a href="">starting at ₹ 53,999</a>
+        </div>
+
+        <div class="item-2">
+          <img class="mi-watch"
+            src="https://in.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwca9d65c5/1.JBL_Tune_770NC_Product%20Image_Hero_Black.png?sw=535&sh=535">
+          <p>JBL Tune 770NC</p>
+          <a href="">at ₹ 5,499</a>
+        </div>
+
+        <div class="item-2">
+          <img class="mi-watch"
+            src="https://gadgetnmusic.com/wp-content/uploads/2024/03/JBL-Go-4-Portable-Bluetooth-Speaker-3.jpg">
+          <p>JBL GO 4</p>
+          <a href="">at ₹ 3,999</a>
+        </div>
+
+        <div class="item-2">
+          <img class="mi-watch"
+            src="https://s3b.cashify.in/gpro/uploads/2023/10/19160833/oneplus-nord-buds-3-side.webp">
+          <p>Oneplus Nord buds 3</p>
+          <a href="">at ₹ 2,399</a>
+        </div>
+
+        <div class="item-2">
+          <img class="mi-watch"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwnWXnFxr-UIQOin59yNJleW-XRKj5C4Wf0Q&s">
+          <p>CASIO Vintage Watch</p>
+          <a href="">at ₹ 6,765</a>
+        </div>
+
+        <div class="item-2">
+          <img class="mi-watch"
+            src="https://images.philips.com/is/image/philipsconsumer/4d767a6f4c674e8484deb0ca00e3c138?wid=700&hei=700&$pnglarge$">
+          <p>Phillips Wireless Speaker</p>
+          <a href="">at ₹ 2,599</a>
+        </div>
+
+        <div class="item-2">
+          <img class="mi-watch" src="https://www.buyreal.in/wp-content/uploads/2024/06/81RHHnGydgL._SL1500_.jpg">
+          <p>Xiaomi Notebook Ultra</p>
+          <a href="">From ₹ 59,999</a>
+        </div>
+
+        <div class="item-2">
+          <img class="mi-watch"
+            src="data:image/jpeg;base64,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">
+          <p>Beats Studio Pro</p>
+          <a href="">at ₹ 37,499</a>
+        </div>
+
+        <div class="item-2">
+          <img class="mi-watch"
+            src="https://static.nbastore.in/resized/500X500/645/nike-air-zoom-gt-jump-2-ep-basketball-shoes-mystic-hibiscus-red-red-66dc6b64d10a7.jpg">
+          <p>Nike Air Zoom G.T.</p>
+          <a href="">at ₹ 11,499</a>
+        </div>
+
+        <div class="item-2">
+          <img class="mi-watch"
+            src="https://shop-int.mercedesamgf1.com/cdn/shop/files/LSRS-XTORQUEBLACKSiteCrop6.jpg?v=1731075907&width=720">
+          <p>Puma RS-X Torque Trainers</p>
+          <a href="">at ₹ 5,750</a>
+        </div>
+
+      </div>
+      
+
+    </div>
+
+
+    <div class="brands-outer-container">
+
+      <div class="brands-container">
+
+        <h3 class="heading">Top Mobile brands</h3>
+
+        <div style="display: flex; justify-content: center;">
+
+          <div class="all-brands">
+
+            <div class="brand-logo">
+              <img class="brand-logos"
+                src="https://www.tailorbrands.com/wp-content/uploads/2021/01/apple_logo_1988.jpg">
+              <p>Apple</p>
+            </div>
+
+            <div class="brand-logo" style="text-align: center;">
+              <img class="brand-logos"
+                src="https://gear31.com/cdn/shop/collections/c85503ffac45d4b8b14ba397f4b44ce9.png?v=1694433422">
+              <p>IQOO</p>
+            </div>
+
+            <div class="brand-logo">
+              <img class="brand-logos" src="https://i.pinimg.com/736x/21/e5/6e/21e56eeedded3fdd129cf5bd291db9ff.jpg">
+              <p>Oneplus</p>
+            </div>
+
+            <div class="brand-logo">
+              <img class="brand-logos"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEWD2wYX7n7seiG65wM2hkTPdbPTZGFTHPow&s">
+              <p>Samsung</p>
+            </div>
+
+            <div class="brand-logo">
+              <img class="brand-logos"
+                src="https://gallerypng.com/wp-content/uploads/2024/07/motorola-logo-photo-750x750.png">
+              <p>Motorola</p>
+            </div>
+
+            <div class="brand-logo">
+              <img class="brand-logos" src="https://assets.beebom.com/brands/Realme/Realme-color.png">
+              <p>Realme</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="brands-container">
+
+        <h3 class="heading">Top clothing brands</h3>
+
+        <div style="display: flex; justify-content: center;">
+
+          <div class="all-brands-arranged">
+
+            <div class="brand-logo">
+              <img class="brand-logos"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMAaKiaRYNTRewPvMiE3pTI6o9LoTX1gpOtw&s">
+              <p>H&M</p>
+            </div>
+
+            <div class="brand-logo">
+              <img class="brand-logos"
+                src="https://play-lh.googleusercontent.com/L7JrV_E1Nxz-_59XdLr5QacnKS-NSt8VF_7xC8ht7_VWHQ3rqnaMsW593Ynu4j0eVgXU">
+              <p>Levi's</p>
+            </div>
+
+            <div class="brand-logo">
+              <img class="brand-logos"
+                src="https://static.vecteezy.com/system/resources/previews/019/136/309/non_2x/adidas-logo-adidas-icon-free-free-vector.jpg">
+              <p>Adidas</p>
+            </div>
+
+            <div class="brand-logo">
+              <img class="brand-logos"
+                src="https://cdn.prod.website-files.com/64f1d2cc5e0dab718e3de0c4/64f1d4bb95e4d28a0da07739_62d839ad96c147a71394b10a_nikelogo.jpeg">
+              <p>Nike</p>
+            </div>
+
+            <div class="brand-logo">
+              <img class="brand-logos" src="picture/A&F.png">
+              <p style="margin-bottom: 0;">Abercrombie</p>
+              <p style="margin-top: 0;">& fitch</p>
+            </div>
+
+            <div class="brand-logo">
+              <img class="brand-logos" src="picture/CK.png">
+              <p>Calvin Klein</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="brands-container">
+
+        <h3 class="heading">Top footwear brands</h3>
+
+        <div style="display: flex; justify-content: center;">
+
+          <div class="all-brands">
+
+            <div class="brand-logo">
+              <img class="brand-logos" src="https://i.pinimg.com/474x/d5/62/0a/d5620af0e61c3882e0f164cae98f0cc9.jpg">
+              <p>New balance</p>
+            </div>
+
+            <div class="brand-logo">
+              <img class="brand-logos"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQhnYOJ1YZqAQPOChff73Okqa9nhFjfsqWIw&s">
+              <p>Vans</p>
+            </div>
+
+            <div class="brand-logo">
+              <img class="brand-logos"
+                src="https://static.vecteezy.com/system/resources/previews/019/136/309/non_2x/adidas-logo-adidas-icon-free-free-vector.jpg">
+              <p>Adidas</p>
+            </div>
+
+            <div class="brand-logo">
+              <img class="brand-logos"
+                src="https://cdn.prod.website-files.com/64f1d2cc5e0dab718e3de0c4/64f1d4bb95e4d28a0da07739_62d839ad96c147a71394b10a_nikelogo.jpeg">
+              <p>Nike</p>
+            </div>
+
+            <div class="brand-logo">
+              <img class="brand-logos"
+                src="https://static.vecteezy.com/system/resources/previews/022/076/746/non_2x/puma-logo-and-art-free-vector.jpg">
+              <p>Puma</p>
+            </div>
+
+            <div class="brand-logo">
+              <img class="brand-logos"
+                src="https://media.glassdoor.com/sqll/3576359/red-tape-squarelogo-1663674843139.png">
+              <p>RedTape</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    <div class="iphone">
+      <h1>Limited Edition</h1>
+      <div class="iphone-container">
+        <div class="animate-box animate-box1">
+            <img src="https://m.media-amazon.com/images/I/71657TiFeHL._AC_UY327_FMwebp_QL65_.jpg" alt="">
+            <h2>Apple iPhone 15 (128 GB) - Black</h2>
+        </div>
+        <div class="animate-box animate-box2">
+            <img src="https://m.media-amazon.com/images/I/71d7rfSl0wL._AC_UY327_FMwebp_QL65_.jpg" alt="">
+            <h2>Apple iPhone 15 (128 GB) - Blue</h2>
+        </div>
+        <div class="animate-box animate-box3">
+            <img src="https://m.media-amazon.com/images/I/71nvkHnPpZL._AC_UY327_FMwebp_QL65_.jpg" alt="">
+            <h2>Apple iPhone 15 (128 GB) - Green</h2>
+        </div>
+    </div>
+  </div>
+    <div class="banner">
+      <h3>Limited time deals</h3>
+    </div>
+
+
+    <div class="container">
+
+      <div class="products-3">
+
+        <h2 class="product-heading">Top Deals</h2>
+
+        <div class="item-3">
+          <img class="pics-3"
+            src="https://i02.appmifile.com/122_operator_in/23/04/2021/1da9de5f68cb8a1108c3ac1dc3100255.jpg"
+            alt="Mi QLED TV">
+          <div class="product-info">
+            <p class="product-name">Mi QLED TV 75</p>
+            <p class="product-price">at ₹ 89,999<del class="deleted-text">₹ 95,499</del></p>
+          </div>
+
+        </div>
+
+        <div class="item-3">
+          <img class="pics-3" src="https://www.istore.pt/media/catalog/product/cache/47a7b1d3a04ad63771ce52f5c8c5c41d/i/m/imac27p_3_1_6.png"
+            alt="I-Mac">
+          <div class="product-info">
+            <p class="product-name">iMac 21.5</p>
+            <p class="product-price"> ₹ 101,000<del class="deleted-text">₹ 115,000</del></p>
+          </div>
+
+        </div>
+
+        <div class="item-3">
+          <img class="pics-3"
+            src="https://whatnot.in/wp-content/uploads/2023/08/playstation-5-horizontal-product-shot-01-ps5-en-23nov20-scaled.webp"
+            alt="Mi Wireless Powerbank">
+          <div class="product-info">
+            <p class="product-name">Sony PlayStation 5</p>
+            <p class="product-price">at ₹ 48,450<del class="deleted-text">₹ 54,990</del></p>
+          </div>
+
+        </div>
+
+        <div class="item-3">
+          <img class="pics-3"
+            src="https://images.philips.com/is/image/philipsconsumer/vrs_316b3890f6eab32873b93072706c5376dbb0b99d?wid=700&hei=700&$pnglarge$"
+            alt="Gaming chair">
+          <div class="product-info">
+            <p class="product-name">Philips Air Purifier</p>
+            <p class="product-price">at ₹ 23,900<del class="deleted-text">₹ 30,100</del></p>
+          </div>
+
+        </div>
+
+        <div class="item-3">
+          <img class="pics-3" src="https://5.imimg.com/data5/ET/IE/OW/GLADMIN-55675556/prestige-induction-cooktop-500x500.jpg"
+            alt="Amazon alexa echo dot">
+          <div class="product-info">
+            <p class="product-name">Prestige Induction stove</p>
+            <p class="product-price">at ₹ 4,700 <del class="deleted-text">₹ 6,700</del></p>
+          </div>
+
+        </div>
+
+        <div class="item-3">
+          <img class="pics-3"
+            src="https://images.samsung.com/is/image/samsung/p6pim/in/ua85du8300uxxl/gallery/in-crystal-uhd-du8000-ua85du8300uxxl-thumb-540319935?$252_252_PNG$"
+            alt="Phillips-smartbulb">
+          <div class="product-info">
+            <p class="product-name">Samsung Crystal 4K</p>
+            <p class="product-price"> from ₹ 39,000 <del class="deleted-text">₹ 45,000</del></p>
+          </div>
+
+        </div>
+
+        <p class="see-more-link">See More ></p>
+
+      </div>
+
+      <div class="products-3">
+
+        <h2 class="product-heading">Amazing Deals</h2>
+
+        <div class="item-3">
+          <img class="pics-3"
+            src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTiMlZFRGcuzXQinWy9jXG0vqF1IrF3Loek1ZWu7JGyuJ6glZ-h0O-cBHTNzr21jGyY45a85whbu2fSX7sjRsM_QjDMlLWLkjNns6u2HdZvE1IFD-imjiVgkw&usqp=CAE"
+            alt="Mi QLED TV">
+          <div class="product-info">
+            <p class="product-name">WWE 2k24 Delux</p>
+            <p class="product-price">at ₹ 2,500<del class="deleted-text">₹ 3,499</del></p>
+          </div>
+
+        </div>
+
+        <div class="item-3">
+          <img class="pics-3" src="https://shopatsc.com/cdn/shop/files/DualSense_01_PR_SterlingSilver_sRGB.jpg?v=1704882713"
+            alt="I-Mac">
+          <div class="product-info">
+            <p class="product-name">PS5 DualSense controller</p>
+            <p class="product-price"> ₹ 4,849<del class="deleted-text">₹ 5,299</del></p>
+          </div>
+
+        </div>
+
+        <div class="item-3">
+          <img class="pics-3"
+            src="https://www.itsource-bd.com/image/cache/catalog/power-bank/xiaomi/ah-wirele/Xiaomi-Mi-10000mAh-Wireless-Power-Bank.jpg-500x500.jpg.webp"
+            alt="Mi Wireless Powerbank">
+          <div class="product-info">
+            <p class="product-name">Mi Wireless Powerbank</p>
+            <p class="product-price">at ₹ 1,950<del class="deleted-text">₹ 2,199</del></p>
+          </div>
+
+        </div>
+
+        <div class="item-3">
+          <img class="pics-3"
+            src="https://images-static.nykaa.com/media/catalog/product/8/7/8710103940180as_1_.jpeg"
+            alt="Gaming chair">
+          <div class="product-info">
+            <p class="product-name">Philips Hair Dryer</p>
+            <p class="product-price">at ₹ 1,395<del class="deleted-text">₹ 1,599</del></p>
+          </div>
+
+        </div>
+
+        <div class="item-3">
+          <img class="pics-3"
+            src="https://kingfisher.scene7.com/is/image/Kingfisher/philips-wiz-b22-60w-led-cool-white-warm-white-a60-smart-light-bulb~8719514372467_02c_bq?$MOB_PREV$&$width=618&$height=618"
+            alt="Phillips-smartbulb">
+          <div class="product-info">
+            <p class="product-name">Phillips Smart bulb</p>
+            <p class="product-price"> at ₹ 550<del class="deleted-text">₹ 845</del></p>
+          </div>
+
+        </div>
+
+        <div class="item-3">
+          <img class="pics-3" src="https://smartify.in/wp-content/uploads/2019/07/amazon-echo-dot-product.jpg"
+            alt="Amazon alexa echo dot">
+          <div class="product-info">
+            <p class="product-name">Amazon Echo dot</p>
+            <p class="product-price">at ₹ 2,475 <del class="deleted-text">₹ 3,999</del></p>
+          </div>
+
+        </div>
+
+        <p class="see-more-link">See More ></p>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <div class="container">
+        <div class="sec about us">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea odio magnam consequuntur quos odit
+                maiores. Recusandae vero voluptates porro necessitatibus.</p>
+            <ul class="sci">
+                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        <div class="sec quicklinks">
+            <h2>Support</h2>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="sec quicklinks">
+            <h2>Shop</h2>
+            <ul>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">kids</a></li>
+                <li><a href="#">Shoes</a></li>
+            </ul>
+        </div>
+        <div class="sec contact">
+            <h2>Contact Us</h2>
+            <ul class="info">
+                <li>
+                    <span>
+                        <i class="fa-solid fa-phone"></i>
+                    </span>
+                    <p><a href="#">+1 234 567 8900</a></p>
+
+                </li>
+                <li>
+                    <span>
+                        <i class="fa-solid fa-envelope"></i>
+                    </span>
+                    <p><a href="#">username@mail.com</a></p>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<div class="copyright-text">
+    <p>copyright 2023 online Tutorials. All Right reserved</p>
+</div>
+
+
+</body>
+
+
+</html>
